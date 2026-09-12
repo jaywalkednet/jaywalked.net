@@ -1,6 +1,7 @@
 <div id="dm">
-      <img id="dm_icon" src="../moon.svg" style="width: 50px; height: 50px;" class="interactable" onclick="dmClick()">
-      </div>
+      <svg class="interactable" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M484-80q-84 0-157.5-32t-128-86.5Q144-253 112-326.5T80-484q0-146 93-257.5T410-880q-18 99 11 193.5T521-521q71 71 165.5 100T880-410q-26 144-138 237T484-80Zm0-80q88 0 163-44t118-121q-86-8-163-43.5T464-465q-61-61-97-138t-43-163q-77 43-120.5 118.5T160-484q0 135 94.5 229.5T484-160Zm-20-305Z"/></svg>
+      <svg class="interactable" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M480-28 346-160H160v-186L28-480l132-134v-186h186l134-132 134 132h186v186l132 134-132 134v186H614L480-28Zm141.5-310.5Q680-397 680-480t-58.5-141.5Q563-680 480-680t-141.5 58.5Q280-563 280-480t58.5 141.5Q397-280 480-280t141.5-58.5ZM395-395q-35-35-35-85t35-85q35-35 85-35t85 35q35 35 35 85t-35 85q-35 35-85 35t-85-35Zm85 255 100-100h140v-140l100-100-100-100v-140H580L480-820 380-720H240v140L140-480l100 100v140h140l100 100Zm0-340Z"/></svg>
+    </div>
 
 <style>
 
@@ -8,20 +9,23 @@
   display: flex;
   justify-content: flex-end;
   width: 100%; 
-  height: 50px;
+  height: 40px;
   position: fixed; 
-  bottom: 15px;
-  padding-right: 15px;
+  bottom: 0px;
+  margin-bottom: 15px;
+  padding-right: 13px;
   z-index: 0;
   pointer-events: none;
 }
 
-#dm_icon{
-  transition: 150ms ease-out;
+#dm > svg{
+  fill: var(--secondary-color);
   pointer-events: auto;
+  height: 100%;
+  width: 50px;
 }
 
-#dm_icon:hover{
+#dm > svg:hover{
   scale: 1.02
 }
 

@@ -1,69 +1,76 @@
 ---
-import '../../components/global.css';
-import '../../components/portfolio.css';
-import PortGame from '../../components/portfolio_game.astro'
-import DarkMode from '../../components/dark_mode.astro'
+import "../../components/global.css";
+import "../../components/portfolio.css";
+import PortGame from "../../components/portfolio_game.astro";
+import DarkMode from "../../components/dark_mode.astro";
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>portfolio</title>
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+    <script is:inline>
+      if (localStorage.getItem('darkmode') === "true"){
+        document.documentElement.classList.add('darkmode');
+      } 
+    </script>
+
     <script>
-      import "../../components/script.js";
+      import "../../components/global.js";
+      import "../../components/darkmode.js";
     </script>
   </head>
-  <body>
-  <div class="center fadeIn"> <!-- for centering -->
-    <div class="content" style="width: 1000px; padding-top: 60px; padding-bottom: 110px; padding: 10px; margin-top: 50px; margin-bottom: 100px">
+  <body style="overflow: hidden">
+    <div class="center fadeIn">
+      <!-- for centering -->
+      <div class="content" style="width: 1000px; padding-top: 60px; padding-bottom: 110px; padding: 10px; margin-top: 50px; margin-bottom: 100px">
+        <div style="width: 100%;">
+          <span style="font-size: 27px;">personal projects</span>
+          <hr/>
+        </div>
 
-      <div style="width: 100%;">
-        <span style="font-size: 27px;">personal projects</span>
-        <hr>
-      </div>
-
-      <div class="project_table">
+        <div class="project_table">
           <PortGame name="★ roids rec-tum" link="https://gamejolt.com/games/roidscomingsoon/1057076" description="really stupid bite-sized fnaf fan-made game i made in 3 weeks" imgSource="https://m.gjcdn.net/game-thumbnail/2000/1057076-evmennyk-v4.webp"/>
-          <PortGame name="★ cashgrab at julian's" link="https://gamejolt.com/p/cashgrab-at-julian-s-is-now-available-v1-1-2-nnmhryti" description="bite-sized fnaf fan-made game i made back in 2023" imgSource="https://m.gjcdn.net/game-thumbnail/1000/788912-qybx7jdy-v4.webp"/>
           <PortGame name="the big night" link="https://gamejolt.com/games/TBN/850856" description="a custom-night mod of the existing fangame 'big the game' that aims to improve gameplay" imgSource="https://m.gjcdn.net/game-thumbnail/1000/850856-49rsjhs6-v4.webp"/>
           <PortGame name="dsmis 3 episode 1 recoded" link="https://gamejolt.com/p/dsmis-3-ep-1-recoded-is-out-now-zcekfzas" description="a complete recode of the existing fangame 'don't scare me i'm scared 3 episode 1' that aims to improve gameplay" imgSource="https://m.gjcdn.net/fireside-post-image/700/42829377-aap565t9-v4.webp"/>
         </div>
-        
+
         <span style="font-size: 25px; margin: 0;text-align: center;">if it helps, these are the programs i use:</span>
         <div id="programs" class="center">
-              <img src="../ctf.webp" onclick="move_page('https://youtu.be/ee925OTFBCA?t=14', 'blank')" style="cursor: pointer" title="clickteam fusion 2.5 :(">
-              <img src="../unity.webp" title="unity :D">
-              <img src="../blender.png" title="blender">
-              <img src="../paintdotnet.webp" title="paint.net">
-              <img src="../affinity.png" style="border-radius: 15px;" title="affinity">
-              <img src="../vsc.png" title="visual studio code">
-              <img src="../DaVinci_Resolve_Studio.png" title="davinci resolve">
-              <img src="../substancepainter.png" title="substance 3d painter">
-              </div>
-        <span style="display: inline;text-align: center;">i've also made the <a href="https://gamejolt.com/games/outwiththeold/752348" target="_blank">fnatas launcher,</a> and <a href="https://gamejolt.com/p/data-retrieved-is-now-available-v1-0-1-nrrtj3fz" target="_blank">'data retrieved'</a> for <a href="https://gamejolt.com/games/bthgames/930036" target="_blank">by the hour</a></span>
-
+          <img src="../ctf.webp" onclick="move_page('https://youtu.be/ee925OTFBCA?t=14', 'blank')" style="cursor: pointer" title="clickteam fusion 2.5 :("/>
+          <img src="../unity.webp" title="unity :D"/>
+          <img src="../blender.png" title="blender"/>
+          <img src="../substancepainter.png" title="substance 3d painter"/>
+          <img src="../paintdotnet.webp" title="paint.net"/>
+          <img src="../affinity.png" style="border-radius: 15px;" title="affinity"/>
+          <img src="../vsc.png" title="visual studio code"/>
+          <img src="../DaVinci_Resolve_Studio.png" title="davinci resolve"/>
+        </div>
+        <span style="text-align: center;">i've also made the <a href="https://gamejolt.com/games/outwiththeold/752348" target="_blank">fnatas launcher,</a> and <a href="https://gamejolt.com/p/data-retrieved-is-now-available-v1-0-1-nrrtj3fz" target="_blank">'data retrieved'</a> for <a href="https://gamejolt.com/games/bthgames/930036" target="_blank">by the hour</a></span>
 
         <div style="width: 100%;">
-        <span style="font-size: 27px;">projects i've worked on</span>
-        <hr color="blue">
-          </div>
+          <span style="font-size: 27px;">projects i've worked on</span>
+          <hr/>
+        </div>
 
-      <div class="project_table">          
+        <div class="project_table">
           <PortGame name="playtime with percy" link="https://gamejolt.com/games/PTwP/669217" description="programming assistance, commercial 3d modelling, quality assurance" imgSource="https://m.gjcdn.net/game-thumbnail/1000/669217-mxqdhyex-v4.webp"/>
+          <PortGame name="ptwp 2" link="https://x.com/PTWithPercy" description="programming assistance, 3d modelling, quality assurance" imgSource="https://m.gjcdn.net/fireside-post-image/700/51126445-ykgfuzmf-v4.webp"/>
           <PortGame name="forgotten at fredbears" link="https://gamejolt.com/games/Forgotten/686230" description="programming assistance" imgSource="/faf.gif"/>
           <PortGame name="the fazbear facility" link="https://gamejolt.com/games/TheFazbearFacility/708822" description="programming assistance" imgSource="https://m.gjcdn.net/game-thumbnail/4000/708822-7bnzuhjm-v4.webp"/>
+          <PortGame name="repair with freddy's: overtime" link="https://gamejolt.com/games/repairswithfreddy2ot/751822" description="main programming, quality assurance" imgSource="https://m.gjcdn.net/game-thumbnail/2000/751822-ezq8ibxi-v4.webp"/>
           <PortGame name="fear nights at freddy's" link="https://gamejolt.com/games/fearnight/997534" description="main programming" imgSource="https://m.gjcdn.net/game-thumbnail/2000/997534-tv4sfqrt-v4.webp"/>
           <PortGame name="a night to fear 2 ak nights" link="https://gamejolt.com/games/Fnafmod/999703" description="programming assistance" imgSource="https://m.gjcdn.net/game-thumbnail/500/999703-crop0_4_840_476-fimpitmt-v4.webp"/>
         </div>
+      </div>
     </div>
-  </div>
-  <div style="width: 100%; min-height: fit-content; position: fixed; bottom: 30px;" class="center">
-    <div class="button interactable" style="width: fit-content;filter: drop-shadow(0 0 6px rgba(66, 58, 83, 0.451));position: sticky;" onclick="move_page('../','self')">go back</div>
+    <div style="width: 100%; min-height: fit-content; position: fixed; bottom: 30px;" class="center">
+      <div class="button interactable" style="width: fit-content;filter: drop-shadow(0 0 6px rgba(66, 58, 83, 0.451));position: sticky;" onclick="move_page('../','self')">go back</div>
     </div>
-
-    <DarkMode/>
-</body>
+    <DarkMode />
+  </body>
 </html>

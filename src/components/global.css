@@ -1,3 +1,15 @@
+:root{
+  --primary-color: #F1F1FF;
+  --secondary-color: #0000FF;
+  --misc-color: #FFFFFF;
+}
+
+html.darkmode{
+  --primary-color: #0c1116;
+  --secondary-color: #F1F1FF;
+  --misc-color: #080c0f;
+}
+
 *{
   padding: 0;
   margin: 0;
@@ -6,16 +18,22 @@
   height: auto;
 }
 
+html{
+  color: var(--secondary-color);
+}
+
 html *{
-  color: var(--secondary-color) !important;
-  border-color: var(--secondary-color) !important;
-  font-family: 'Times New Roman', Times, serif !important;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 body {
-  background-color: var(--primary-color);
+  background-color: var(--primary-color, #F1F1FF);
   font-family: Verdana;
   height: 100%;
+}
+
+hr{
+  border-color: var(--secondary-color);
 }
 
 .center, .center > *{
@@ -31,7 +49,7 @@ body {
   
 .fadeIn{
   animation-name: fadeIn;
-  animation-duration: 1s;
+  animation-duration: 0.75s;
 }
 
 .interactable, .interactable_c > * {
@@ -59,8 +77,8 @@ body {
 .button{
   background-color: var(--misc-color);
   padding: 15px;
-  border: solid #0000FF 4px;
-  color: #0000FF;
+  border: solid var(--secondary-color) 4px;
+  color: var(--secondary-color);
   margin-top: 10px;
   font-family: 'Times New Roman', Times, serif;
   font-size: 20px;
@@ -94,4 +112,16 @@ body {
 
 .about_text > *, b{
   color: #0000FF !important;
+}
+
+#dm svg:last-child{
+  display: none;
+}
+
+.darkmode #dm svg:first-child{
+  display: none;
+}
+
+.darkmode #dm svg:last-child{
+  display: block;
 }

@@ -11,11 +11,10 @@ const { text, image, title } = Astro.props;
     <hr style="width: 100%; height: 4px; border: unset !important" />
 
     <div style="display: flex;padding: 20px;padding-top: 16px;width: 100%">
-      <div style="font-size: 21px; max-width: 650px;" set:html={text} />
-      <img
-        src={image}
-        style="height: 120px;user-drag: none; user-select: none;"
-      />
+      <div style="font-size: 21px; max-width: 600px;" set:html={text} />
+      <div style="min-width: 120px; min-height: 100%; padding-left: 12px">
+        <img src={image} style="width: 100%;height: 100%"/>
+      </div>
     </div>
   </div>
 </div>
@@ -24,8 +23,8 @@ const { text, image, title } = Astro.props;
   #textbox {
     outline: 5px solid var(--secondary-color);
     width: 100%;
-    color: var(--secondary-color) !important;
-    background-color: var(--misc-color) !important;
+    color: var(--secondary-color);
+    background-color: var(--misc-color);
     user-select: none;
     margin-top: 5px;
   }
