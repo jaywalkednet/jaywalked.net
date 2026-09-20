@@ -10,7 +10,7 @@
 }
 
 img{
-  transition: 150ms ease-out;
+  transition: scale 150ms, transform 150ms;
   top: 0px
 }
 
