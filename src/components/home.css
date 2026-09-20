@@ -1,14 +1,32 @@
+<<<<<<< Updated upstream
+=======
+@import url('global.css');
+
+@media only screen and (min-width: 417px) {
+  body {
+      overflow: hidden;
+    }
+}
+
+>>>>>>> Stashed changes
 #social{
   display: flex;
   flex-wrap: wrap;
 }
 
-#social > * {
+#social > *{
   width: 45px;
+<<<<<<< Updated upstream
   margin-left: 5px;
   margin-right: 5px;
   height: auto;
   transition: 150ms ease-out;
+=======
+  margin: 0 7px;
+  height: auto;
+  transition: transform 150ms ease-out, scale 150ms ease-out;
+  filter: var(--filter);
+>>>>>>> Stashed changes
 }
 
 #social > *:hover{
@@ -16,10 +34,6 @@
   transform: translateY(-2px);
 }
 
-#home_nav{
-  flex-direction: row;
-}
-
-#home_nav > button{
-   margin-right: 10px;
+.content > img{
+  filter: var(--filter);
 }
