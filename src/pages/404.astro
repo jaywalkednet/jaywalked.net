@@ -1,39 +1,29 @@
 ---
-import "../components/global.css";
-import "../components/home.css";
-import DarkMode from "../components/dark_mode.astro";
+import '../components/global.css';
+import '../components/home.css';
 ---
 
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>404</title>
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-
-    <script is:inline>
-      if (localStorage.getItem('darkmode') === "true"){
-        document.documentElement.classList.add('darkmode');
-      } 
-    </script>
-
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <script>
-      import "../components/global.js";
-      import "../components/darkmode.js";
-    </script>
+    import "../components/script.js";
+  </script>
   </head>
 
-  <body>
-    <div class="center fadeIn">
-      <!-- for centering -->
-      <div class="content" style="width: 800px;">
-        <img src="https://cdn.pixabay.com/photo/2015/11/03/08/56/question-mark-1019820_1280.jpg" style="width: 150px;"/>
-        <span style="font-size: 36px; margin: 0;text-align: center;">where are you going? there isn't anything here</span>
-        (404: page not found)
-        <button style="margin-top: 15px" class="button interactable" onclick="move_page('../', 'self')">go home</button>
+  <body>  
+  <div class="center fadeIn"> <!-- for centering -->
+    <div class="content" style="width: 800px;">
+      <img src="https://cdn.pixabay.com/photo/2015/11/03/08/56/question-mark-1019820_1280.jpg" style="width: 150px;">
+      <span style="font-size: 36px; margin: 0;">where are you going? there isn't anything here</span>
+      <br>(404: page not found)
+      <button class="button interactable" onclick="move_page('../', 'self')">go home</button>
       </div>
     </div>
-    <DarkMode/>
-  </body>
+  </div>
+</body>
 </html>
