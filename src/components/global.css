@@ -1,3 +1,5 @@
+<<<<<<< Updated upstream
+=======
 :root{
   --primary-color: #F1F1FF;
   --secondary-color: #0000FF;
@@ -12,6 +14,7 @@ html.darkmode{
   --filter: brightness(0) invert(1);
 }
 
+>>>>>>> Stashed changes
 *{
   padding: 0;
   margin: 0;
@@ -25,8 +28,48 @@ html.darkmode{
   --main-color: #ffffff;
 }
 
+<<<<<<< Updated upstream
+html *{
+  color: var(--main-color) !important;
+  border-color: var(--main-color) !important;
+  font-family: 'Times New Roman', Times, serif !important;
+  transition: 150ms ease-out;
+}
+
+body {
+  background-color: #f1f1ff;
+  color: black;
+  font-family: Verdana;
+  height: 100%;
+  transition: 150ms ease-out;
+}
+
+ul{
+  padding-left: 40px;
+}
+
+.center, .center > *{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  }
+
+.center{
+  min-height: 100dvh; 
+}
+  
+.fadeIn{
+  animation-name: fadeIn;
+  animation-duration: 1s;
+}
+
+.interactable, .interactable_c > * {
+  cursor: pointer;
+=======
 body {
   background-color: var(--primary-color, #F1F1FF);
+>>>>>>> Stashed changes
 }
 
 @keyframes fadeIn{
@@ -63,12 +106,17 @@ body {
   animation-duration: 0.75s;
 }
 
+<<<<<<< Updated upstream
+.button{
+  background-color: #FFFFFF;
+=======
 .interactable, .interactable_c > * {
   cursor: pointer;
 }
 
 button{
   background-color: var(--misc-color);
+>>>>>>> Stashed changes
   padding: 15px;
   border: solid #0000FF 4px;
   color: #0000FF;
@@ -82,6 +130,30 @@ button:hover{
   text-decoration: none;
 }
 
+<<<<<<< Updated upstream
+.about_textbox{
+  font-size: 20px;
+  color: #0000FF;
+  padding: 10px;
+  display: flex;  
+  flex-direction: row;
+  background-image: url("thing.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: solid blue 5px !important;
+  font-family: 'Times New Roman', Times, serif;
+  background-color: white;
+}
+
+.about_text > *{
+  padding: 10px;
+  padding-top: 40px;
+  font-size: 20px;
+}
+
+.about_text > *, b{
+  color: #0000FF !important;
+=======
 #dm svg:last-child{
   display: none;
 }
@@ -92,4 +164,5 @@ button:hover{
 
 .darkmode #dm svg:last-child{
   display: block;
+>>>>>>> Stashed changes
 }
