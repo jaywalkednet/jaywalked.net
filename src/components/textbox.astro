@@ -1,8 +1,9 @@
 ---
 const { text, image, title } = Astro.props;
 ---
-<div style="margin: 20px; margin-top: unset">
-  <div id="textbox" style="width: 100%;">
+
+<div style="padding: 0 13px; margin-top: unset; width: 100%">
+  <div id="textbox">
     <div style="padding: 6px; padding-left: 12px;">
       <span style="text-decoration: underline;">{title}</span>
     </div>
@@ -10,8 +11,10 @@ const { text, image, title } = Astro.props;
     <hr style="width: 100%; height: 4px; border: unset !important"/>
 
     <div style="display: flex;padding: 20px;padding-top: 16px;width: 100%">
-      <div style="font-size: 21px; max-width: 650px;" set:html={text}/>
-      <img src={image} style="height: 120px;user-drag: none; user-select: none;"/>
+      <div style="font-size: 21px; max-width: 600px;" set:html={text}/>
+      <div id="image">
+        <img src={image} style="max-width: 100%;"/>
+      </div>
     </div>
   </div>
 </div>
@@ -27,6 +30,22 @@ const { text, image, title } = Astro.props;
 
   #textbox :global(b) {
     color: var(--main-color) !important;
+  }
+
+  #image{
+    max-width: 120px;
+    width: 100%;
+    height: auto;
+    margin-left: 12px;
+    display: flex;
+    align-items: center;
+    filter: var(--filter);
+  }
+
+  @media only screen and (max-width: 500px){
+    #image{
+      display: none;
+    }
   }
 
   #image{

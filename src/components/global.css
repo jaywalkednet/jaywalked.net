@@ -21,8 +21,8 @@ html.darkmode{
   font-family: 'Times New Roman', Times, serif;
 }
 
-:root{
-  --main-color: #ffffff;
+html{
+  color: var(--secondary-color);
 }
 
 body {
