@@ -31,7 +31,7 @@ import TextBox from '../components/textbox.astro';
   <body style="overflow: hidden">  
     <div class="center fadeIn">
       <div class="content" style="width: 800px">
-        <img src="Logo.svg" style="margin-bottom: 0px; width: 90%">
+        <img src="Logo.svg" style="margin-bottom: 0px; width: 75%">
         <div id="social" class="interactable_c" style="margin: 16px 0 12px 0">
             <img src="yt.svg" onclick="move_page('https://www.youtube.com/@jaywalked', 'blank')">
             <img src="insta.svg" onclick="move_page('https://www.instagram.com/jaywalkednet/', 'blank')">
@@ -39,8 +39,8 @@ import TextBox from '../components/textbox.astro';
             <img src="gamejolt.svg" onclick="move_page('https://gamejolt.com/@jaywalked', 'blank')">   
         </div>
         <TextBox title="information" image="Circle.svg" text="<b>my name is jay</b>, a black male creating multiple forms of media, most notably game development. i work on multiple projects, create 2D & 3D art/animation, graphic design and video edit.<br><b>feel free to check out my portfolio!</b>"/>
-        <button class="button interactable" onclick="move_page('portfolio', 'self')">check out my portfolio!</button>
-        <span style="text-align: center"><br>note 12/9/26: this website will be getting a design overhaul in the near future!</span>
+        <button class="interactable" onclick="move_page('portfolio', 'self')">check out my portfolio!</button>
+        <span style="text-align: center; margin: 0 5px"><br>note 12/9/26: this website will be getting a design overhaul in the near future!</span>
       </div>
     </div>
     <DarkMode/>
