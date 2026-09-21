@@ -24,28 +24,23 @@ html.darkmode{
   font-family: 'Times New Roman', Times, serif;
 }
 
-:root{
-  --main-color: #ffffff;
+html{
+  color: var(--secondary-color);
 }
 
 <<<<<<< Updated upstream
 html *{
-  color: var(--main-color) !important;
-  border-color: var(--main-color) !important;
-  font-family: 'Times New Roman', Times, serif !important;
-  transition: 150ms ease-out;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 body {
-  background-color: #f1f1ff;
-  color: black;
+  background-color: var(--primary-color, #F1F1FF);
   font-family: Verdana;
   height: 100%;
-  transition: 150ms ease-out;
 }
 
-ul{
-  padding-left: 40px;
+hr{
+  border-color: var(--secondary-color);
 }
 
 .center, .center > *{
@@ -61,7 +56,7 @@ ul{
   
 .fadeIn{
   animation-name: fadeIn;
-  animation-duration: 1s;
+  animation-duration: 0.75s;
 }
 
 .interactable, .interactable_c > * {
@@ -118,8 +113,8 @@ button{
   background-color: var(--misc-color);
 >>>>>>> Stashed changes
   padding: 15px;
-  border: solid #0000FF 4px;
-  color: #0000FF;
+  border: solid var(--secondary-color) 4px;
+  color: var(--secondary-color);
   margin-top: 10px;
   font-size: 20px;
   text-decoration: underline;
@@ -165,4 +160,16 @@ button:hover{
 .darkmode #dm svg:last-child{
   display: block;
 >>>>>>> Stashed changes
+}
+
+#dm svg:last-child{
+  display: none;
+}
+
+.darkmode #dm svg:first-child{
+  display: none;
+}
+
+.darkmode #dm svg:last-child{
+  display: block;
 }

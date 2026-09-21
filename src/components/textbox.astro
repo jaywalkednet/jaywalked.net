@@ -31,15 +31,16 @@ const { text, image, title } = Astro.props;
 
 <style>
   #textbox {
-    outline: 5px solid var(--main-color);
+    outline: 5px solid var(--secondary-color);
     width: 100%;
-    color: var(--main-color) !important;
+    color: var(--secondary-color);
+    background-color: var(--misc-color);
     user-select: none;
     margin-top: 5px;
   }
 
   #textbox :global(b) {
-    color: var(--main-color) !important;
+    color: var(--secondary-color) !important;
   }
 
   #image{
@@ -59,6 +60,6 @@ const { text, image, title } = Astro.props;
   }
 
   hr {
-    background-color: var(--main-color);
+    background-color: var(--secondary-color);
   }
 </style>
